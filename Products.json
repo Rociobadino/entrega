@@ -125,5 +125,23 @@
         "description": "negra",
         "stock": "3",
         "category": "grande"
+    },
+    {
+        "id": 15,
+        "title": "pelo",
+        "description": "negra",
+        "stock": "3",
+        "category": "grande"
+    },
+    {
+        "id": 16,
+        "code": "",
+        "status": true,
+        "title": "buzo",
+        "description": "rosa con brillos",
+        "price": "50",
+        "stock": "5",
+        "category": "jfbg",
+        "thumbnails": "image"
     }
 ]

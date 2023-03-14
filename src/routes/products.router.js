@@ -27,7 +27,6 @@ router.get('/', async (req, res) => {
 router.get('/:pid', async (req, res) => {
     try {
         const productId = req.params.pid;
-
         const product = await productManager.getProductById(productId);
 
         if (product) {
@@ -46,9 +45,27 @@ router.post("/", async (req, res) => {
     const product = req.body;
     const newProduct = await productManager.addProduct(product);
     !newProduct
-      ? res.status(400).json({ error: "No se pudo agregar el producto" })
-      : res.status(201).json(product);
-  });
+        ? res.status(400).json({ error: "No se pudo agregar el producto" })
+        : res.status(201).json(product);
+});
+
+router.put("/:pid", async (req, res) => {
+    try {
+        const productId = req.params.pid;
+        const product = await productManager.getProductById(productId);
+        const modification = req.body;
+        if (product) {
+         await productManager.updateProducts(parseInt(productId),...modification)
+            res.send(200).json({message: "producto modificado"})
+        } else {
+            console.log('error')
+        }
+    } catch {
+        console.error(err);
+        res.status(500).json({ error: 'Error al actualizar producto' })
+    }
+    return modificatedProduct
+});
 
 
 

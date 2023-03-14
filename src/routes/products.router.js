@@ -64,7 +64,7 @@ router.put("/:pid", async (req, res) => {
         console.error(err);
         res.status(500).json({ error: 'Error al actualizar producto' })
     }
-    return modificatedProduct
+   
 });
 
 

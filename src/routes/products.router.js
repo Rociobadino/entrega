@@ -41,15 +41,15 @@ router.get('/:pid', async (req, res) => {
 
 })
 
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
     const product = req.body;
     const newProduct = await productManager.addProduct(product);
     !newProduct
         ? res.status(400).json({ error: "No se pudo agregar el producto" })
-        : res.status(201).json(product);
+        : res.status(201).json(newProduct);
 });
 
-router.put("/:pid", async (req, res) => {
+router.put('/:pid', async (req, res) => {
     try {
         const productId = req.params.pid;
         const product = await productManager.getProductById(productId);
@@ -67,6 +67,18 @@ router.put("/:pid", async (req, res) => {
    
 });
 
+router.delete('/:id', async (req,res) => {
+        const productId = req.params.pid;
+        const products = await productManager.deleteProductsById(productId);
+        res.json({ products });
+      });
+
+// router.put("/:pid", async (req, res) => {
+//     const { pid } = req.params;
+//     const obj = req.body;
+//     const product = await productManager.updateProduct(+pid, obj);
+//     res.json({ product });
+//   });
 
 
 

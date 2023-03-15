@@ -62,17 +62,20 @@ class ProductManager {
     }
 
     updateProducts = async (id, obj) => {
-        const products = await this.getProducts()
+        const products = await this.getProducts();
         const indexProducts = products.findIndex(p => p.id === id)
         if (products === -1) {
             return 'Producto no encontrado'
-        }
+        } else{
         const productUpdate = { ...products[indexProducts], ...obj }
+        // const productIndex = products.findIndex((p)=> p.id === id)
         products.splice(indexProducts, 1, productUpdate)
         await fs.promises.writeFile(this.path, JSON.stringify(products, null, 4))
         return productUpdate
-    }
+        }
 
+    };
+  
     //products.splice=decis en que indice queres pararte, cuantos productos eliminar y que producto actualizar.
 
     #generarID = (products) => {
@@ -132,44 +135,44 @@ class ProductManager {
 }
 export default ProductManager;
 
-const product1 = {
-    title: 'mochila',
-    description: 'verde',
-    price: '56',
-    stock: '5',
-    category: 'jfbg',
-    thumbnails: 'image'
+// const product1 = {
+//     title: 'mochila',
+//     description: 'verde',
+//     price: '56',
+//     stock: '5',
+//     category: 'jfbg',
+//     thumbnails: 'image'
 
 
-}
-const product2 = {
-    title: 'cartuchera',
-    description: 'rosa con brillos',
-    price: '50',
-    stock: '5',
-    category: 'jfbg',
-    thumbnails: 'image'
+// }
+// const product2 = {
+//     title: 'cartuchera',
+//     description: 'rosa con brillos',
+//     price: '50',
+//     stock: '5',
+//     category: 'jfbg',
+//     thumbnails: 'image'
 
-}
-const product3 = {
-    title: 'buzo',
-    description: 'rosa con brillos',
-    price: '50',
-    stock: '5',
-    category: 'jfbg',
-    thumbnails: 'image'
+// }
+// const product3 = {
+//     title: 'buzo',
+//     description: 'rosa con brillos',
+//     price: '50',
+//     stock: '5',
+//     category: 'jfbg',
+//     thumbnails: 'image'
 
-}
+// }
 
-async function prueba() {
-    const manager = new ProductManager('Products.json')
-    const products = await manager.getProducts()
-    await manager.addProduct(product3)
-    console.log(products)
-    // await manager.updateProducts(9,{title: 'buzo'})
-    // await manager.eliminarProductsById(12)
-}
+// async function prueba() {
+//     const manager = new ProductManager('Products.json')
+//     const products = await manager.getProducts()
+//     await manager.addProduct(product3)
+//     console.log(products)
+//     // await manager.updateProducts(9,{title: 'buzo'})
+//     // await manager.eliminarProductsById(12)
+// }
 
 
 
-prueba()
+// prueba()

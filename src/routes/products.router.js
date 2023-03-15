@@ -3,10 +3,6 @@ const router = Router()
 import ProductManager from '../ProductManager.js'
 const productManager = new ProductManager('./Products.json')
 
-// express.json()
-// express.urlencoded({ extended: true })
-
-
 router.get('/', async (req, res) => {
     try {
         const limit = req.query.limit;
@@ -55,31 +51,24 @@ router.put('/:pid', async (req, res) => {
         const product = await productManager.getProductById(productId);
         const modification = req.body;
         if (product) {
-         await productManager.updateProducts(parseInt(productId),...modification)
+         await productManager.updateProducts(parseInt(productId), modification)
             res.send(200).json({message: "producto modificado"})
         } else {
             console.log('error')
         }
     } catch {
-        console.error(err);
-        res.status(500).json({ error: 'Error al actualizar producto' })
+        res.sendStatus(500).json({ error: 'Error al actualizar producto' })
     }
    
 });
 
-router.delete('/:id', async (req,res) => {
+router.delete('/:pid', async (req,res) => {
         const productId = req.params.pid;
-        const products = await productManager.deleteProductsById(productId);
+        const products = await productManager.eliminarProductsById(parseInt(productId));
         res.json({ products });
       });
 
-// router.put("/:pid", async (req, res) => {
-//     const { pid } = req.params;
-//     const obj = req.body;
-//     const product = await productManager.updateProduct(+pid, obj);
-//     res.json({ product });
-//   });
-
+    
 
 
 export default router

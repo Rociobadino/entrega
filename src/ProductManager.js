@@ -1,5 +1,4 @@
 import fs from 'fs'
-import json from 'stream/consumers'
 
 class ProductManager {
     constructor(path) {
@@ -59,6 +58,7 @@ class ProductManager {
         const products = await this.getProducts()
         const arrayProductsNuevos = products.filter(p => p.id !== id)
         await fs.promises.writeFile(this.path, JSON.stringify(arrayProductsNuevos, null, 4))
+        return arrayProductsNuevos
     }
 
     updateProducts = async (id, obj) => {
@@ -66,16 +66,15 @@ class ProductManager {
         const indexProducts = products.findIndex(p => p.id === id)
         if (products === -1) {
             return 'Producto no encontrado'
-        } else{
-        const productUpdate = { ...products[indexProducts], ...obj }
-        // const productIndex = products.findIndex((p)=> p.id === id)
-        products.splice(indexProducts, 1, productUpdate)
-        await fs.promises.writeFile(this.path, JSON.stringify(products, null, 4))
-        return productUpdate
+        } else {
+            const productUpdate = { ...products[indexProducts], ...obj }
+            products.splice(indexProducts, 1, productUpdate)
+            await fs.promises.writeFile(this.path, JSON.stringify(products, null, 4))
+            return productUpdate
         }
 
     };
-  
+
     //products.splice=decis en que indice queres pararte, cuantos productos eliminar y que producto actualizar.
 
     #generarID = (products) => {

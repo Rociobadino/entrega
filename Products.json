@@ -2,287 +2,52 @@
     {
         "id": 1,
         "title": "cartuchera",
-        "description": "rosa con brillos",
-        "code": "34545",
-        "price": "50",
-        "status": true,
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
+        "description": "rosa",
+        "stock": "3",
+        "category": "chico",
+        "image": "image"
     },
     {
         "id": 2,
         "title": "cartuchera",
-        "description": "rosa con brillos",
-        "code": "34545",
-        "price": "50",
-        "status": true,
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
-    },
-    {
-        "id": 3,
-        "title": "cartuchera",
-        "description": "rosa con brillos",
-        "code": "34545",
-        "price": "50",
-        "status": true,
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
+        "description": "rosa",
+        "stock": "3",
+        "category": "chico",
+        "image": "image"
     },
     {
         "id": 4,
         "title": "cartuchera",
-        "description": "rosa con brillos",
-        "code": "34545",
-        "price": "50",
-        "status": true,
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
+        "description": "rosa",
+        "stock": "3",
+        "category": "chico",
+        "image": "image"
     },
     {
         "id": 5,
-        "title": "buzo",
-        "description": "rosa con brillos",
-        "code": "34545",
-        "price": "50",
-        "status": true,
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
+        "title": "cartuchera",
+        "description": "rosa",
+        "stock": "3",
+        "category": "chico",
+        "image": "image"
     },
     {
         "id": 6,
-        "title": "buzo",
-        "description": "rosa con brillos",
-        "code": "34545",
-        "price": "50",
-        "status": true,
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
+        "title": "cartuchera",
+        "description": "rosa",
+        "stock": "3",
+        "category": "chico",
+        "image": "image"
     },
     {
         "id": 7,
-        "title": "buzo",
-        "description": "rosa con brillos",
-        "code": "34545",
-        "price": "50",
-        "status": true,
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
-    },
-    {
-        "id": 8,
-        "title": "auto",
-        "description": "rojo",
-        "code": "45gbhfgn"
-    },
-    {
-        "id": 9,
-        "title": "auto",
-        "description": "rojo",
-        "code": "45gbhfgn"
-    },
-    {
-        "id": 10,
-        "title": "remera",
-        "description": "rojo",
-        "code": "45gbhfgn"
-    },
-    {
-        "id": 11,
-        "title": "mochila",
-        "description": "negra",
-        "stock": "3",
-        "category": "grande"
-    },
-    {
-        "id": 12,
-        "title": "cartu",
-        "description": "negra",
-        "stock": "3",
-        "category": "grande"
-    },
-    {
-        "id": 13,
         "code": "",
         "status": true,
         "title": "buzo",
-        "description": "rosa con brillos",
-        "price": "50",
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
-    },
-    {
-        "id": 14,
-        "title": "tijera",
-        "description": "negra",
+        "description": "gris",
         "stock": "3",
-        "category": "grande"
-    },
-    {
-        "id": 15,
-        "title": "pelo",
-        "description": "negra",
-        "stock": "3",
-        "category": "grande"
-    },
-    {
-        "id": 16,
-        "code": "",
-        "status": true,
-        "title": "buzo",
-        "description": "rosa con brillos",
-        "price": "50",
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
-    },
-    {
-        "id": "15",
-        "title": "pelo",
-        "description": "turquesa",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": "15",
-        "title": "pelo",
-        "description": "blanco",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 15,
-        "title": "pelo",
-        "description": "blanco",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 16,
-        "title": "trenza",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 17,
-        "code": "",
-        "status": true,
-        "title": "buzo",
-        "description": "rosa con brillos",
-        "price": "50",
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
-    },
-    {
-        "id": 18,
-        "code": "",
-        "status": true,
-        "title": "buzo",
-        "description": "rosa con brillos",
-        "price": "50",
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
-    },
-    {
-        "id": 19,
-        "title": "trenza",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 20,
-        "title": "trenza",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 21,
-        "code": "",
-        "status": true,
-        "title": "buzo",
-        "description": "rosa con brillos",
-        "price": "50",
-        "stock": "5",
-        "category": "jfbg",
-        "thumbnails": "image"
-    },
-    {
-        "id": 22,
-        "title": "colita",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 23,
-        "title": "colita",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 24,
-        "title": "colita",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 25,
-        "title": "colita",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 26,
-        "title": "lapiz",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 27,
-        "title": "lapiz",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico",
-        "status": "",
-        "code": ""
-    },
-    {
-        "id": 28,
-        "title": "lapiz",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 29,
-        "title": "lapiz",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico"
-    },
-    {
-        "id": 30,
-        "title": "lapiz",
-        "description": "rosa",
-        "stock": "3",
-        "category": "chico",
+        "category": "dnvdf",
+        "price": 55,
         "image": "image"
     }
 ]

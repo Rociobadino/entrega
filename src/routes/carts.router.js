@@ -21,7 +21,7 @@ router.get('/:cid', async (req, res) => {
 //agregar producto en un carrito
 router.post('/:cid/product/id', async (req, res) => {
     const { cid, id } = req.params
-    const addProduct = await managerCart.addProductToCart(+cid, id)
+    const addProduct = await managerCart.addProductToCart(+cid, +id)
     res.json({ message: addProduct })
 })
 

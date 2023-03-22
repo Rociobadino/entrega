@@ -16,6 +16,14 @@
         "image": "image"
     },
     {
+        "id": 3,
+        "title": "cartuchera",
+        "description": "rosa",
+        "stock": "3",
+        "category": "chico",
+        "image": "image"
+    },
+    {
         "id": 4,
         "title": "cartuchera",
         "description": "rosa",

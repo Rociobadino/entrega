@@ -1,9 +1,9 @@
-import express from "express";
-import productsRouter from './routes/products.router.js'
-import cartsRouter from './routes/carts.router.js'
+import express from 'express';
+import productsRouter from './routes/products.router.js';
+import cartsRouter from './routes/carts.router.js';
 import { __dirname } from "./utils.js";
-import handlebars from 'express-handlebars'
-import viewsRouter from './routes/views.router.js' 
+import handlebars from 'express-handlebars';
+import viewsRouter from './routes/views.router.js';
 import { Server } from "socket.io";
 
 

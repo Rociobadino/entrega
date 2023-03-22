@@ -5,6 +5,9 @@ import { __dirname } from "./utils.js";
 import handlebars from 'express-handlebars';
 import viewsRouter from './routes/views.router.js';
 import { Server } from "socket.io";
+import ProductManager from './ProductManager.js'
+const productManager = new ProductManager('./Products.json')
+
 
 
 const app = express();
@@ -39,5 +42,11 @@ socketServer.on('connection',(socket)=>{
     socket.on('disconnect',()=>{
         console.log(`usuario desconectado: ${socket.id}`);
     })
+
+    socket.on("newProduct", (newProduct) => {
+		productManager.addProduct({ ...newProduct });
+		console.log(newProduct);
+	});
+
 })
 

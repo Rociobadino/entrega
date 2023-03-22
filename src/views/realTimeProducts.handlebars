@@ -1,5 +1,53 @@
 
-<h1>TIME PRODUCTS</h1>
+
+
+{{#if products.length}}
+ <h2 align='center'>Time Products</h2>
+  <table class='table' id='table' cellPadding='10' border='1' align='center'>
+    <thead>
+      <tr>
+        <th>#id</th>
+        <th>Product</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Category</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each products}}
+        <tr>
+          <td>{{id}}</td>
+          <td>{{title}}</td>
+          <td>{{description}}</td>
+          <td>${{price}}</td>
+          <td>{{stock}}</td>
+          <td>{{category}}</td>
+          <td><button class='delete' dataId='{{id}}'>Borrar</button></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+<h2 align='center'>Agregar producto</h2>
+  <form id="createProduct" align='center'>
+    
+	<input type="text" id="productTitle" name="title" placeholder="title" />
+	<input type="text" id="productDescription" name="description" placeholder="description" />
+	<input type="number" id="productPrice" name="price" placeholder="price" />
+	{{!-- <input type="number" id="productCode" name="code" placeholder="code" /> --}}
+	<input type="number" id="productStock" name="stock" placeholder="stock" />
+	<input type="text" id="productCategory" name="category" placeholder="category" />
+
+	<button type="submit" id ="addProduct">Agregar</button>
+</form>
+
+{{else}}
+  <h2>Products didn't register</h2>
+{{/if}}
+
+
 
 
 <script src="/socket.io/socket.io.js"></script>

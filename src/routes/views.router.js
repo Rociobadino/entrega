@@ -21,39 +21,39 @@ router.get('/', async (req, res) => {
     res.render('realTimeProducts', { products });
 });
 
-// router.post('/realtimeproducts', async (req, res) => {
-//     try {
-//       const obj = req.body;
-//       const newProduct = await productManager.addProducts(obj);
-//       res.render('realTimeProducts', { newProduct });
-//     } catch (error) {
-//       console.error(err);
-//       res.status(400).json({ error: 'It was not possible to add the product' });
-//     }
-//   });
+router.post('/realtimeproducts', async (req, res) => {
+    try {
+      const obj = req.body;
+      const newProduct = await productManager.addProducts(obj);
+      res.render('realTimeProducts', { newProduct });
+    } catch (error) {
+      console.error(err);
+      res.status(400).json({ error: 'It was not possible to add the product' });
+    }
+  });
 
-//   router.put('/realtimeproducts/:pid', async (req, res) => {
-//     try {
-//       const { pid } = req.params;
-//       const obj = req.body;
-//       const product = await productManager.updateProduct(+pid, obj);
-//       res.render('realTimeProducts', { product });
-//     } catch (error) {
-//       console.error(err);
-//       res.status(500).json({ error: 'Error updating the product' });
-//     }
-//   });
+  router.put('/realtimeproducts/:pid', async (req, res) => {
+    try {
+      const { pid } = req.params;
+      const obj = req.body;
+      const product = await productManager.updateProduct(+pid, obj);
+      res.render('realTimeProducts', { product });
+    } catch (error) {
+      console.error(err);
+      res.status(500).json({ error: 'Error updating the product' });
+    }
+  });
   
-//   router.delete('/realtimeproducts/:pid', async (req, res) => {
-//     try {
-//       const { pid } = req.params;
-//       const products = await productManager.deleteProductsById(+pid);
-//       res.render('realTimeProducts', { products });
-//     } catch (error) {
-//       console.error(err);
-//       res.status(500).json({ error: 'It was not possible to delete the product' });
-//     }
-//   });
+  router.delete('/realtimeproducts/:pid', async (req, res) => {
+    try {
+      const { pid } = req.params;
+      const products = await productManager.deleteProductsById(+pid);
+      res.render('realTimeProducts', { products });
+    } catch (error) {
+      console.error(err);
+      res.status(500).json({ error: 'It was not possible to delete the product' });
+    }
+  });
 
 
 

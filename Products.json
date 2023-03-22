@@ -73,22 +73,11 @@
         "id": 9,
         "code": "",
         "status": true,
-        "title": "dfdg",
-        "description": "hgfgh",
-        "price": 2,
+        "title": "buzo",
+        "description": "negro",
+        "price": 3,
         "thumbnail": [],
-        "stock": 3,
-        "category": "ggg"
-    },
-    {
-        "id": 10,
-        "code": "",
-        "status": true,
-        "title": "dfd",
-        "description": "dfdfd",
-        "price": 2,
-        "thumbnail": [],
-        "stock": 3,
-        "category": "dfdf"
+        "stock": 2,
+        "category": "ghng"
     }
 ]

@@ -48,9 +48,14 @@ socketServer.on('connection',(socket)=>{
 		console.log(newProduct);
 	});
 
-    socket.on("deleteProduct", async (id) => {
-		console.log(id);
-		productManager.eliminarProducts()
+    // socket.on("deleteProduct", async (id) => {
+	// 	console.log(id);
+	// 	productManager.eliminarProducts()
+	// });
+
+    socket.on("deleteProduct", (productId) => {
+		console.log(`Product deleted ${productId}`);
+		productManager.eliminarProductsById(productId);
 	});
 
 })

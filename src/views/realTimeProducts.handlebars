@@ -13,7 +13,7 @@
         <th>Delete</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="productsTable">
       {{#each products}}
         <tr>
           <td>{{id}}</td>
@@ -22,7 +22,8 @@
           <td>${{price}}</td>
           <td>{{stock}}</td>
           <td>{{category}}</td>
-          <td><button class='delete' dataId='{{id}}'>Borrar</button></td>
+          {{!-- <td><button type='submit' id='delete'>Borrar</button></td> --}}
+          <td><button type="submit" class="classDeleteProduct" data-id="{{id}}">Borrar</button></td>
         </tr>
       {{/each}}
     </tbody>

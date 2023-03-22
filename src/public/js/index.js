@@ -37,12 +37,32 @@ const inputCategory = document.getElementById('productCategory');
 	socketClient.emit("newProduct", newProduct);
 });
 
-const deleteProduct = document.getElementsByClassName('delete')
 
-deleteProduct.addEventListener("click", (e) => {
-	e.preventDefault();
-  console.log("click");
-})
+// const deleteProduct = document.querySelector('delete');
+// deleteProduct.onclick = (e) => {
+//     e.preventDefault();
+//     socketClient.emit('delete');
+//   };
+
+  const deleteProduct = document.querySelector("#productsTable");
+
+  deleteProduct.addEventListener("click", (e) => {
+      e.preventDefault();
+      const element = e.target;
+      const productId = element.getAttribute("data-id");
+      if (element.className === "classDeleteProduct") {
+          socketClient.emit("deleteProduct", parseInt(productId));
+          document.location.reload()
+      }
+  });
+
+// const deleteProduct = document.getElementsById('delete')
+
+// deleteProduct.addEventListener("click", (e) => {
+// 	e.preventDefault();
+//   console.log('Producto borrado');
+//   socketClient.emit('Producto eliminado')
+// })
 
 //   addProduct.onclick = (e) => {
 //     e.preventDefault();

@@ -43,9 +43,14 @@ socketServer.on('connection',(socket)=>{
         console.log(`usuario desconectado: ${socket.id}`);
     })
 
-    socket.on("newProduct", (newProduct) => {
-		productManager.addProduct({ ...newProduct });
+    socket.on('newProduct', (newProduct) => {
+		productManager.addProduct(newProduct);
 		console.log(newProduct);
+	});
+
+    socket.on("deleteProduct", async (id) => {
+		console.log(id);
+		productManager.eliminarProducts()
 	});
 
 })

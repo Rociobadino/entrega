@@ -1,6 +1,4 @@
 
-
-
 {{#if products.length}}
  <h2 align='center'>Time Products</h2>
   <table class='table' id='table' cellPadding='10' border='1' align='center'>
@@ -29,6 +27,12 @@
       {{/each}}
     </tbody>
   </table>
+{{else}}
+  <h2>Products didn't register</h2>
+{{/if}}
+
+<br />
+<br />
 
 <h2 align='center'>Agregar producto</h2>
   <form id="createProduct" align='center'>
@@ -40,13 +44,8 @@
 	<input type="number" id="productStock" name="stock" placeholder="stock" />
 	<input type="text" id="productCategory" name="category" placeholder="category" />
 
-	<button type="submit" id ="addProduct">Agregar</button>
+	<button type='submit' id='addProduct'>Add product</button>
 </form>
-
-{{else}}
-  <h2>Products didn't register</h2>
-{{/if}}
-
 
 
 

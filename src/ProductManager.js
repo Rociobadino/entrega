@@ -125,7 +125,7 @@ class ProductManager {
                 throw new Error(`Falta la categoria del producto.`);
             } else if (product.id) {
                 throw new Error(`El producto no se debe cargar con el id`);
-            } else if (product.code) {
+             } else if (product.code) {
                 throw new Error(`El producto no se debe cargar con el code`);
             }
         }

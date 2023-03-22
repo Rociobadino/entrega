@@ -57,5 +57,38 @@
         "category": "dnvdf",
         "price": 55,
         "image": "image"
+    },
+    {
+        "id": 8,
+        "code": "",
+        "status": true,
+        "title": "regg",
+        "description": "blanca",
+        "price": 2,
+        "thumbnail": [],
+        "stock": 2,
+        "category": "gbg"
+    },
+    {
+        "id": 9,
+        "code": "",
+        "status": true,
+        "title": "dfdg",
+        "description": "hgfgh",
+        "price": 2,
+        "thumbnail": [],
+        "stock": 3,
+        "category": "ggg"
+    },
+    {
+        "id": 10,
+        "code": "",
+        "status": true,
+        "title": "dfd",
+        "description": "dfdfd",
+        "price": 2,
+        "thumbnail": [],
+        "stock": 3,
+        "category": "dfdf"
     }
 ]

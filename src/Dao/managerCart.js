@@ -1,8 +1,8 @@
 import fs from 'fs'
 
-export class ManagerCart {
+export default class ManagerCart {
     constructor(path) {
-        this.path = path
+        this.path = path;
     }
 
 
@@ -25,11 +25,11 @@ export class ManagerCart {
         }
 
     }
-    async createCart() {
+    async createCart(products = []) {
         const cartsFile = await this.getCarts();
         const newCart = {
             id: this.#generarID(cartsFile),
-            products: []
+            products 
         }
         cartsFile.push(newCart)
         await fs.promises.writeFile(this.path, JSON.stringify(cartsFile))
@@ -41,7 +41,7 @@ export class ManagerCart {
         if (!cart) return 'cart not found'
         const productIndex = cart.products.findIndex(p => p.product === pid)
         if (productIndex === -1) {
-            cart.products.push({ product: idProduct, quantity: 1 })
+            cart.products.push({ product: pid, quantity: 1 })
         } else {
             cart.products[productIndex].quantity++
         }

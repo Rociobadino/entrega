@@ -1,7 +1,10 @@
 import { Router } from 'express'
 const router = Router()
-import ProductManager from '../ProductManager.js'
+// import ProductManager from '../Dao/ProductManager.js'
+import ProductManager from '../Dao/ProductManagerMongo.js'
 const productManager = new ProductManager('./Products.json')
+
+
 
 router.get('/', async (req, res) => {
     try {
@@ -64,7 +67,7 @@ router.put('/:pid', async (req, res) => {
 
 router.delete('/:pid', async (req,res) => {
         const productId = req.params.pid;
-        const products = await productManager.eliminarProductsById(parseInt(productId));
+        const products = await productManager.eliminarProductsById((productId));
         res.json({ products });
       });
 

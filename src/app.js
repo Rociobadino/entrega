@@ -5,8 +5,13 @@ import { __dirname } from "./utils.js";
 import handlebars from 'express-handlebars';
 import viewsRouter from './routes/views.router.js';
 import { Server } from "socket.io";
-import ProductManager from './ProductManager.js'
+import ProductManager from './Dao/ProductManager.js'
+import '../db/dbConfig.js'
+import chatRouter from './routes/chat.router.js';
+import ChatManager from './Dao/chatManagerMongo.js';
+
 const productManager = new ProductManager('./Products.json')
+const chatManager = new ChatManager();
 
 
 
@@ -24,6 +29,7 @@ app.set('view engine', 'handlebars')
 app.use('/api/products', productsRouter)
 app.use('/api/carts', cartsRouter)
 app.use('/views', viewsRouter)
+app.use('/chat', chatRouter)
 // app.use('/realTimeProducts',viewsRouter)
 
 
@@ -33,6 +39,10 @@ app.use('/views', viewsRouter)
 const httpServer = app.listen(8080,()=>{
     console.log('escuchando puerto');
 })
+
+
+
+const infoMensajes = [] //todavia no se para que
 
 const socketServer = new Server(httpServer)
 
@@ -57,6 +67,14 @@ socketServer.on('connection',(socket)=>{
 		console.log(`Product deleted ${productId}`);
 		productManager.eliminarProductsById(productId);
 	});
+
+	//para que el servidor escuche ese evento
+	socket.on('mensaje', async info => {
+		await chatManager.agregarMensaje(info)
+
+	})
+
+	
 
 })
 
